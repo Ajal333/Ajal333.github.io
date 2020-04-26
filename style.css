@@ -176,10 +176,10 @@ body{
     font-size: 20px;
     text-align: center;
     letter-spacing: 2px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lato', sans-serif;
     color: black;
     position: absolute;
-    right: 10%;
+    left: 5%;
 }
 
 .name-right{
@@ -198,10 +198,10 @@ body{
     font-size: 20px;
     text-align: center;
     letter-spacing: 2px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lato', sans-serif;
     color: black;
     position: absolute;
-    left: 10%;
+    left: 5%;
 }
 
 
