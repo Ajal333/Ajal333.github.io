@@ -4,27 +4,50 @@ body{
     padding: 0;
 }
 
-.back {
-    background-size: cover;
+.skills {
+    width:200px;
+    height:50px;
+    border-radius: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Lato' , 'sans-serif';
+    background-image: linear-gradient(to right, rgb(255, 136, 0), rgb(255, 94, 0));
+    top: 20%;
+    right: 12%;
+    letter-spacing: 2px;
+    position: absolute;
+    animation : skills 2s ease-in-out alternate infinite;
+}
+
+@keyframes skills {
+    0%{
+        transform : rotateZ(10deg)
+    }
+
+    100% {
+        transform: rotateZ(-10deg);
+    }
 }
 
 .js img{
     position: absolute;
     width: 40px;
     height: 40px;
-    top : 10%;
-    left: 25%;
+    top : 40%;
+    right: 20%;
     animation: cards 2s ease-in-out alternate infinite
 }
 
 .pro1{
     position: absolute;
-    background-size: cover;
+    /* background-size: cover; */
     background-image: linear-gradient(to bottom,rgb(255, 153, 0),rgb(255, 51, 0));
     color: black;
     width: 200px;
     height: 200px;
-    top: 20%;
+    top: 10%;
     left: 10%;
     animation: cards 4s ease-in-out alternate infinite;
     border-radius: 10px;
@@ -44,13 +67,13 @@ body{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-size: cover;
+    /* background-size: cover; */
     background-image: linear-gradient(to top right,rgb(255, 0, 149),rgb(132, 0, 255));
     color: black;
     width: 200px;
     height: 200px;
-    top: 60%;
-    right: 10%;
+    top: 70%;
+    left: 10%;
     animation: cards 4s ease-in-out alternate infinite;
     border-radius: 10px;
     box-shadow:  0 0 20px #33FFFF;
@@ -66,13 +89,13 @@ body{
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-size: cover;
+    /* background-size: cover; */
     background-image: linear-gradient(to right,rgb(0, 217, 255),rgb(0, 26, 255));
     color: black;
     width: 200px;
     height: 200px;
-    top: 20%;
-    right: 10%;
+    top: 40%;
+    left: 10%;
     animation: cards 4s ease-in-out alternate infinite;
     border-radius: 10px;
     box-shadow:  0 0 20px #33FFFF;
@@ -92,8 +115,8 @@ body{
     position: absolute;
     width: 60px;
     height: 60px;
-    bottom : 20%;
-    left: 15%;
+    top : 40%;
+    right: 10%;
     animation: cards1 2s ease-in-out alternate infinite
 }
 
@@ -101,8 +124,8 @@ body{
     position: absolute;
     width: 60px;
     height: 60px;
-    top : 70%;
-    right: 25%;
+    top : 40%;
+    right: 15%;
     animation: cards 4s ease-in-out alternate infinite;
 }
 
@@ -344,7 +367,7 @@ body{
     border-top-left-radius:10px ;
     border-bottom-left-radius:10px ;
     background-color: white;
-    width: 45%;
+    width: 50%;
     height: 40px;
     top: 60%;
     right: 25%;
