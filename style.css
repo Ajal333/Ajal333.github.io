@@ -33,12 +33,81 @@ body{
 
 .js img{
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     top : 40%;
+    right: 20%;
+    animation: cards1 2s ease-in-out alternate infinite
+}
+
+.c img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 50%;
+    right: 15%;
+    animation: cards1 2s ease-in-out alternate infinite
+}
+
+.cpp img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 50%;
+    right: 10%;
+    animation: cards 2s ease-in-out alternate infinite
+}
+.html img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 60%;
+    right: 20%;
+    animation: cards1 2s ease-in-out alternate infinite
+}
+.css img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 60%;
+    right: 15%;
+    animation: cards 2s ease-in-out alternate infinite
+}
+.python img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 40%;
+    right: 10%;
+    animation: cards1 2s ease-in-out alternate infinite
+}
+
+.react img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 40%;
+    right: 15%;
+    animation: cards 2s ease-in-out alternate infinite;
+}
+.mongo img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 60%;
+    right: 10%;
+    animation: cards1 2s ease-in-out alternate infinite
+}
+
+.node img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 50%;
     right: 20%;
     animation: cards 2s ease-in-out alternate infinite
 }
+
 
 .pro1{
     position: absolute;
@@ -111,23 +180,6 @@ body{
     font-size: 20px;
 }
 
-.python img{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top : 40%;
-    right: 10%;
-    animation: cards1 2s ease-in-out alternate infinite
-}
-
-.react img{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top : 40%;
-    right: 15%;
-    animation: cards 4s ease-in-out alternate infinite;
-}
 
 @keyframes cards {
     0%{
@@ -321,9 +373,9 @@ body{
     left: 25%;
 }
 
-.name-left :hover {
+/* .name-left :hover {
     cursor: pointer;
-}
+} */
 
 .name-left h1 {
     font-size: 20px;
@@ -347,9 +399,9 @@ body{
     right: 25%;
 }
 
-.name-right :hover {
+/* .name-right :hover {
     cursor: pointer;
-}
+} */
 
 .name-right h1 {
     font-size: 20px;
@@ -383,9 +435,9 @@ body{
     left: 5%;
 }
 
-.name-right-1 :hover {
+/* .name-right-1 :hover {
     cursor: pointer;
-}
+} */
 
 .content {
     font-size: large;
