@@ -4,6 +4,132 @@ body{
     padding: 0;
 }
 
+.back {
+    background-size: cover;
+}
+
+.js img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top : 10%;
+    left: 25%;
+    animation: cards 2s ease-in-out alternate infinite
+}
+
+.pro1{
+    position: absolute;
+    background-size: cover;
+    background-image: linear-gradient(to bottom,rgb(255, 153, 0),rgb(255, 51, 0));
+    color: black;
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    left: 10%;
+    animation: cards 4s ease-in-out alternate infinite;
+    border-radius: 10px;
+    box-shadow:  0 0 20px #33FFFF;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pro1 , h2 :hover{
+    cursor: pointer;
+}
+
+.pro2{
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-image: linear-gradient(to top right,rgb(255, 0, 149),rgb(132, 0, 255));
+    color: black;
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 10%;
+    animation: cards 4s ease-in-out alternate infinite;
+    border-radius: 10px;
+    box-shadow:  0 0 20px #33FFFF;
+    text-align: center;
+}
+
+.pro2 , h2 :hover{
+    cursor: pointer;
+}
+
+.pro3{
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-image: linear-gradient(to right,rgb(0, 217, 255),rgb(0, 26, 255));
+    color: black;
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    right: 10%;
+    animation: cards 4s ease-in-out alternate infinite;
+    border-radius: 10px;
+    box-shadow:  0 0 20px #33FFFF;
+    text-align: center;
+}
+
+.pro3 , h2 :hover{
+    cursor: pointer;
+}
+
+.back h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.python img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom : 20%;
+    left: 15%;
+    animation: cards1 2s ease-in-out alternate infinite
+}
+
+.react img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top : 70%;
+    right: 25%;
+    animation: cards 4s ease-in-out alternate infinite;
+}
+
+@keyframes cards {
+    0%{
+        transform: translateY(-40%);
+    }
+
+    100%{
+        transform: translateY(20%);
+    }
+}
+
+
+@keyframes cards1 {
+    0%{
+        transform: translateY(-40%);
+    }
+
+    100%{
+        transform: translateY(40%);
+        transform: rotateY(180deg);
+    }
+
+}
+
+
 .main {
     position: absolute;
     width: 600px;
@@ -19,17 +145,17 @@ body{
 
 @keyframes main {
     0%{
-        box-shadow:  0 0 10px rgb(7, 233, 139),
-    0 0 20px rgb(7, 233, 139),
-    0 0 30px rgb(7, 233, 139),
-    0 0 40px rgb(7, 233, 139);
+        box-shadow:  0 0 10px #33FFFF,
+    0 0 20px #33FFFF,
+    0 0 30px #33FFFF,
+    0 0 40px #33FFFF;
     }
 
     100% {
-        box-shadow:  0 0 50px rgb(7, 233, 139),
-    0 0 60px rgb(7, 233, 139),
-    0 0 70px rgb(7, 233, 139),
-    0 0 80px rgb(7, 233, 139);
+        box-shadow:  0 0 50px #33FFFF,
+    0 0 60px #33FFFF,
+    0 0 70px #33FFFF,
+    0 0 80px #33FFFF;
     }
 }
 
@@ -131,17 +257,17 @@ body{
 }
 
 .avatar{
-    width: 20%;
-    height: 20%;
+    width: 25%;
+    height: 25%;
     position: relative;
     border-radius: 50%;
-    box-shadow:  0 0 10px #33FFFF,
+    /* box-shadow:  0 0 10px #33FFFF,
     0 0 15px #33FFFF,
     0 0 20px #33FFFF,
-    0 0 25px #33FFFF;
+    0 0 25px #33FFFF; */
 }
 
-.avatar-cover {
+/* .avatar-cover {
     width:23%;
     height: 23%;
     border-radius: 50%;
@@ -157,7 +283,7 @@ body{
 .img-contain:hover .avatar-cover {
     transition:  transform 300ms ease-in-out;
     transform: translate(75%,50%) rotate(50deg);
-}
+} */
 
 
 .name-left{
@@ -166,10 +292,14 @@ body{
     border-top-left-radius:10px ;
     border-bottom-right-radius:10px ;
     background-color: white;
-    width: 40%;
+    width: 15%;
     height: 40px;
     top: 40%;
     left: 25%;
+}
+
+.name-left :hover {
+    cursor: pointer;
 }
 
 .name-left h1 {
@@ -194,6 +324,10 @@ body{
     right: 25%;
 }
 
+.name-right :hover {
+    cursor: pointer;
+}
+
 .name-right h1 {
     font-size: 20px;
     text-align: center;
@@ -204,6 +338,31 @@ body{
     left: 5%;
 }
 
+.name-right-1{
+    position: absolute;
+    border-top-right-radius:10px ;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+    background-color: white;
+    width: 45%;
+    height: 40px;
+    top: 60%;
+    right: 25%;
+}
+
+.name-right-1 h1 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    position: absolute;
+    left: 5%;
+}
+
+.name-right-1 :hover {
+    cursor: pointer;
+}
 
 .content {
     font-size: large;
@@ -216,7 +375,7 @@ body{
 
 
 .link i{
-    color: rgb(7, 233, 139);
+    color: #33FFFF;
     padding-right: 30px;
     font-size: 40px;
     pointer-events: none;
@@ -227,7 +386,7 @@ body{
     cursor: pointer;
     transform: translateY(-40%);
     transition: transform 100ms ease-in-out;
-    color: #00FF00;
+    color: rgb(0, 174, 255);
 }
 
 .links{
