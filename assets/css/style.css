@@ -17,6 +17,10 @@ body {
   top: 0;
   left: 0;
   margin: 10px;
+}
+
+.ajal a {
+  text-decoration: none;
   font-size: 30px;
   color: rgba(8, 197, 125, 0.7);
   text-shadow: 3px 3px black;
@@ -69,7 +73,7 @@ body {
 
 .aboutMe .aboutHeadContainer {
   height: 20%;
-  margin: 10px;
+  margin: 30px;
 }
 
 .headingText,
@@ -90,7 +94,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin: 10px;
+  margin: 30px;
 }
 
 .aboutDescContainer img {
