@@ -12,10 +12,21 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.ajal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  font-size: 30px;
+  color: rgba(8, 197, 125, 0.7);
+  text-shadow: 3px 3px black;
+}
+
 .topDiv,
 .aboutMe,
 .contact {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -58,6 +69,7 @@ body {
 
 .aboutMe .aboutHeadContainer {
   height: 20%;
+  margin: 10px;
 }
 
 .headingText,
@@ -78,6 +90,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin: 10px;
 }
 
 .aboutDescContainer img {
@@ -110,7 +123,7 @@ body {
 }
 
 .contactDescContainer {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -143,5 +156,24 @@ body {
   .aboutDescContainer img {
     width: 300px;
     height: 300px;
+  }
+
+  .descText h4 {
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutMe .aboutDescContainer {
+    flex-direction: column;
+  }
+
+  .descText h4 {
+    line-height: normal;
+  }
+
+  .aboutDescContainer img {
+    width: 250px;
+    height: 250px;
   }
 }
