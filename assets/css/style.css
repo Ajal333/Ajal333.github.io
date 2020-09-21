@@ -35,7 +35,8 @@ body {
   height: 30%;
 }
 
-.headingText {
+.headingText,
+.contactHeading {
   font-size: 50px;
   letter-spacing: 5px;
   font-weight: normal;
@@ -46,11 +47,61 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 
 .aboutDescContainer img {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
+  animation: shadow 2s alternate infinite;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 7px 27px 0px rgba(8, 159, 197, 0.7);
+  }
+  50% {
+    box-shadow: 0px -1px 27px 0px rgba(8, 197, 125, 0.7);
+  }
+  100% {
+    box-shadow: 0px -7px 27px 0px rgba(8, 197, 140, 0.7);
+  }
+}
+
+.contactDescContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px;
+}
+
+.contactDescContainer a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.contactDescContainer a:hover {
+  transform: scale(1.2);
+  color: rgba(8, 197, 125, 0.7);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lineAnime {
+  height: 2px;
+  background-color: rgba(8, 197, 125, 0.7);
+  width: 85%;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe .aboutDescContainer {
+    flex-direction: column;
+  }
+
+  .aboutDescContainer img {
+    width: 300px;
+    height: 300px;
+  }
 }

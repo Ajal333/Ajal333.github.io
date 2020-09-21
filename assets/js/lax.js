@@ -1,5 +1,7 @@
 window.onload = function () {
-  lax.setup(); // init
+  lax.setup({
+    breakpoints: { small: 0, large: 992 },
+  }); // init
 
   const updateLax = () => {
     lax.update(window.scrollY);
