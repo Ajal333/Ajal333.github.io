@@ -26,6 +26,14 @@ body {
   padding: 30px;
 }
 
+.topDiv {
+  background: url("../img/pic3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .aboutMe {
   background: url("../img/pic1.jpg");
   background-position: center;
@@ -77,6 +85,16 @@ body {
   height: 350px;
   border-radius: 50%;
   animation: shadow 2s alternate infinite;
+}
+
+.descText {
+  padding: 20px;
+}
+
+.descText h4 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 50px;
 }
 
 @keyframes shadow {
