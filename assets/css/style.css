@@ -30,7 +30,7 @@ body {
 .aboutMe,
 .contact {
   min-height: 100vh;
-  height: auto;
+  /* height: auto; */
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -50,11 +50,12 @@ body {
 }
 
 .aboutMe {
-  background: url("../img/pic1.jpg");
+  /* background: url("../img/pic1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  flex: 1 4;
 }
 
 .contact {
@@ -82,7 +83,7 @@ body {
 }
 
 .aboutMe .aboutHeadContainer {
-  height: 20%;
+  /* height: 20%; */
   margin: 30px;
 }
 
@@ -98,7 +99,7 @@ body {
 }
 
 .aboutMe .aboutDescContainer {
-  height: 80%;
+  /* height: 80%; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -116,9 +117,10 @@ body {
 
 .descText {
   padding: 20px;
+  width: 50%;
 }
 
-.descText h4 {
+.descText p {
   font-weight: normal;
   font-size: 20px;
   line-height: 50px;
@@ -172,7 +174,11 @@ body {
     height: 300px;
   }
 
-  .descText h4 {
+  .descText {
+    width: 100%;
+  }
+
+  .descText p {
     line-height: normal;
   }
 }
@@ -182,13 +188,19 @@ body {
     flex-direction: column;
   }
 
-  .descText h4 {
+  .descText p {
     line-height: normal;
+  }
+
+  .descText {
+    width: 100%;
+    padding: 20px 0;
   }
 
   .aboutDescContainer img {
     width: 250px;
     height: 250px;
+    margin-bottom: 30px;
   }
 }
 
@@ -304,3 +316,19 @@ body {
 }
 
 /* End of loader */
+
+/* cursor */
+.cursor {
+  position: absolute;
+  width: 0.1px;
+  height: 200px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  pointer-events: none;
+  /* border-radius: 50%; */
+  border-radius: 9px;
+  background: linear-gradient(145deg, #4bdb91, #59ffac);
+  box-shadow: 37px 37px 74px #339462, -37px -37px 74px #73ffe0;
+}
+/* end of cursor */
