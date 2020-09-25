@@ -318,7 +318,7 @@ body {
 /* End of loader */
 
 /* cursor */
-.cursor {
+/* .cursor {
   position: absolute;
   width: 0.1px;
   height: 200px;
@@ -326,9 +326,8 @@ body {
   transform: translate(-50%, -50%);
   transform-origin: center;
   pointer-events: none;
-  /* border-radius: 50%; */
   border-radius: 9px;
   background: linear-gradient(145deg, #4bdb91, #59ffac);
   box-shadow: 37px 37px 74px #339462, -37px -37px 74px #73ffe0;
-}
+} */
 /* end of cursor */
