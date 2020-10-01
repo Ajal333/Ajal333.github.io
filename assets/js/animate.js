@@ -19,11 +19,11 @@ window.addEventListener("load", () => {
   }, 2000);
 });
 
-window.addEventListener("mousemove", (e) => {
-  let mouseCursor = document.querySelector(".cursor");
-  console.log(e);
-  mouseCursor.style.top = e.pageY + "px";
-  mouseCursor.style.left = e.pageX + "px";
-});
+// window.addEventListener("mousemove", (e) => {
+//   let mouseCursor = document.querySelector(".cursor");
+//   console.log(e);
+//   mouseCursor.style.top = e.pageY + "px";
+//   mouseCursor.style.left = e.pageX + "px";
+// });
 
 heroHeadingAnimation();
