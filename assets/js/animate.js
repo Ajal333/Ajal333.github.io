@@ -10,14 +10,14 @@ function heroHeadingAnimation() {
   });
 }
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    const loader = document.querySelector("#load");
-    loader.classList.add("endLoad");
-    const name = document.querySelector("#name");
-    name.classList.add("showName");
-  }, 2000);
-});
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     const loader = document.querySelector("#load");
+//     loader.classList.add("endLoad");
+//     const name = document.querySelector("#name");
+//     name.classList.add("showName");
+//   }, 2000);
+// });
 
 // window.addEventListener("mousemove", (e) => {
 //   let mouseCursor = document.querySelector(".cursor");
