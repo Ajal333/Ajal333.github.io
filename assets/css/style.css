@@ -12,6 +12,18 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(245, 17, 17);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.952);
+}
+
 .ajal {
   position: fixed;
   top: 0;
@@ -136,16 +148,18 @@ body {
 .mainCard {
   width: 100%;
   height: 100%;
-  transition: all 1s ease-in-out;
+  transition: all 1.5s ease-in-out;
   transform-style: preserve-3d;
 }
 
 .about:hover .flipCard {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .projects:hover .mainCard {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .about figure,
@@ -185,10 +199,11 @@ body {
 
 .projectsBack {
   flex-direction: column;
+  /* justify-content: space-around !important; */
 }
 
 .image {
-  filter: drop-shadow(0px 9px 6px #2a2929);
+  filter: drop-shadow(0px 1px 12px rgb(245, 17, 17));
   background-blend-mode: lighten;
   border-radius: 50%;
   width: 200px;
@@ -213,6 +228,7 @@ body {
 
 .contactDescContainer a:hover {
   transform: scale(1.5);
+  color: rgb(245, 17, 17);
 }
 
 .aboutHeadContainer h1 {
@@ -223,7 +239,7 @@ body {
 }
 
 .skill {
-  margin: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
 .bar {
@@ -231,12 +247,18 @@ body {
   width: 300px;
   height: 10px;
   border-radius: 30px;
+  margin-top: 10px;
 }
 
 .level {
-  background: linear-gradient(-90deg, #e60808, #e60808c2);
+  background: linear-gradient(-90deg, #e60808, #e21d1dc0);
   height: 100%;
   border-radius: 30px;
+}
+
+.mic {
+  width: 200px;
+  height: 200px;
 }
 
 @media screen and (max-width: 780px) {
