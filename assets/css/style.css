@@ -38,6 +38,28 @@ body {
   text-shadow: 3px 3px black;
 }
 
+.smallName {
+  /* color: rgb(245, 17, 17); */
+  background: linear-gradient(45deg, rgb(161, 159, 159), rgb(250, 246, 246));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: normal;
+  animation: nameAnime 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2.5s forwards;
+  opacity: 0;
+}
+
+@keyframes nameAnime {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .topDiv,
 .contact {
   min-height: 100vh;
