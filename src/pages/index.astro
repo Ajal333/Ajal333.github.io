@@ -1,0 +1,27 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Button from '../components/Button/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+import Footer from '../components/Footer/index.jsx';
+import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
+
+// Data Fetching: List all Markdown posts in the repo.
+const projects = Astro.fetchContent('./project/**/*.md');
+const featuredProject = projects[0];
+
+---
+<html lang="en">
+  <head>
+    <MainHead title="A J A L" />
+  </head>
+  <body>
+  <!-- Landing page -->
+    <section class="w-screen bg-blackish min-h-screen flex justify-center items-center">
+      <p class="text-reddish">
+      Hello world
+      </p> 
+    </section>
+    <!-- End of Landing page -->
+  </body>
+</html>
