@@ -5,12 +5,8 @@ import AosSetup from "../components/AosSetup.astro"
 import Nav from '../components/Nav/index.jsx';
 import ScrollDown from "../components/ScrollDown/index.jsx";
 import Footer from '../components/Footer/index.jsx';
-import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
 import Social from "../components/Social/index.jsx";
 
-// Data Fetching: List all Markdown posts in the repo.
-const projects = Astro.fetchContent('./project/**/*.md');
-const featuredProject = projects[0];
 
 ---
 <html lang="en">
