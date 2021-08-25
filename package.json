@@ -11,5 +11,9 @@
     "@astrojs/renderer-preact": "^0.2.1",
     "astro": "^0.19.3",
     "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "feather-icons": "^4.28.0"
   }
 }

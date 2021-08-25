@@ -13,8 +13,13 @@ module.exports = {
     colors: {
       reddish: "#e23655",
       blackish: "#151418",
-      greyish: "#151418",
+      greyish: "#242329",
       whitish: "#FBFBFF",
+    },
+    extend: {
+      animation: {
+        "bounce-slow": "bounce 4s linear infinite",
+      },
     },
   },
 };

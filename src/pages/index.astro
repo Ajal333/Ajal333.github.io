@@ -1,10 +1,12 @@
 ---
 // Component Imports
 import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
+import AosSetup from "../components/AosSetup.astro"
 import Nav from '../components/Nav/index.jsx';
+import ScrollDown from "../components/ScrollDown/index.jsx";
 import Footer from '../components/Footer/index.jsx';
 import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
+import Social from "../components/Social/index.jsx";
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = Astro.fetchContent('./project/**/*.md');
@@ -14,14 +16,32 @@ const featuredProject = projects[0];
 <html lang="en">
   <head>
     <MainHead title="A J A L" />
+    
   </head>
-  <body>
+  <body class="bg-blackish relative overflow-x-hidden w-screen min-h-screen">
+      <!-- Navbar -->
+  <Nav />
+  <!-- End of Navbar -->
+  <!-- Social Links -->
+  <Social />
+  <!-- End of Social Links -->
   <!-- Landing page -->
-    <section class="w-screen bg-blackish min-h-screen flex justify-center items-center">
-      <p class="text-reddish">
-      Hello world
-      </p> 
+    <section class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center" style="background-image: url('/assets/landing.svg');">
+      <!-- <div data-aos="fade-up" data-aos-once="false" class="absolute w-96 h-96 top-20 left-2/3 bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/blob.svg');">
+      </div> -->
+       <section class=" w-2/3 h-96 flex" >
+       <div class="flex-1 flex items-start justify-start flex-col ">
+       <h3 class=" font-normal text-whitish text-4xl leading-relaxed tracking-widest " >Hey! I'm Ajal</h3>
+       <p class="font-normal text-xl text-whitish tracking-wide leading-relaxed">I am a fullstack developer</p>
+       <ScrollDown />
+       </div>
+       <div class="flex-1 bg-contain bg-top bg-no-repeat" style="background-image: url('/assets/dev.svg');">
+       </div>
+       </section>
     </section>
     <!-- End of Landing page -->
+    <section class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative" style="background-image: url('/assets/second.svg');">
+    </section>
+    <AosSetup />
   </body>
 </html>
