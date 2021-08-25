@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        "bounce-slow": "bounce 4s linear infinite",
+        "bounce-slow": "bounce 3.5s linear infinite",
       },
     },
   },
