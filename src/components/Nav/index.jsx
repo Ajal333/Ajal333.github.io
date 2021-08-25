@@ -12,15 +12,21 @@ function Nav() {
         {/* <p className={`text-whitish font-semibold text-lg`}>Ajal</p> */}
       </div>
       <div className="flex-1 flex items-center justify-evenly">
-        <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish transition-colors duration-500">
-          Home
-        </p>
-        <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish  transition-colors duration-500">
-          Projects
-        </p>
-        <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish  transition-colors duration-500">
-          Contact
-        </p>
+        <a href="#home">
+          <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish transition-colors duration-500">
+            Home
+          </p>
+        </a>
+        <a>
+          <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish  transition-colors duration-500">
+            Projects
+          </p>
+        </a>
+        <a href="#contacts" className="md:hidden">
+          <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish  transition-colors duration-500">
+            Contact
+          </p>
+        </a>
       </div>
     </nav>
   );

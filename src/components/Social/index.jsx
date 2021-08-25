@@ -1,6 +1,9 @@
 const Social = () => {
   return (
-    <div className="absolute md:fixed bottom-10 left-1/2 transform -translate-x-1/2 w-4/5 md:top-1/2  md:left-10 lg:left-16 md:-translate-y-2/4 md:w-16 md:h-64 z-40 p-2 flex items-center justify-evenly md:flex-col">
+    <div
+      id="contacts"
+      className="absolute md:fixed bottom-10 left-1/2 transform -translate-x-1/2 w-4/5 md:top-1/2  md:left-10 lg:left-16 md:-translate-y-2/4 md:w-16 md:h-64 z-40 p-2 flex items-center justify-evenly md:flex-col"
+    >
       <a href="https://github.com/Ajal333" target="__blank">
         <i
           data-feather="github"
