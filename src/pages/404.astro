@@ -7,14 +7,11 @@ import Nav from '../components/Nav/index.jsx';
 
 <html lang="en">
   <head>
-    <MainHead title="Not Found" />
+    <MainHead title="A J A L | Not Found" />
   </head>
-  <body>
-    <Nav />
-    <div >
-      <h1>Page Not Found</h1>
-      <p>Not found</p>
-    </div>
-    <Footer />
+  <body class="w-full min-h-screen bg-blackish flex items-center justify-center flex-col p-4" >
+    <img src="/assets/404.svg" alt='404' class=" w-11/12 h-11/12 md:w-1/3 md:h-1/3" />
+    <h1 class="mt-10 text-reddish text-center tracking-widest tex-lg md:text-2xl" >Oops! We dont have anything that you are looking for.</h1>
+    <a href="/" class="mt-10 text-reddish text-center text-lg animate-bounce-slow hover:underline cursor-pointer">Get over here!</a>
   </body>
 </html>
