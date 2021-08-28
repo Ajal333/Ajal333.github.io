@@ -17,9 +17,9 @@ function Nav() {
             Home
           </p>
         </a>
-        <a>
+        <a href="#skills">
           <p className="text-whitish font-semibold text-lg cursor-pointer hover:text-reddish  transition-colors duration-500">
-            Projects
+            Skills
           </p>
         </a>
         <a href="#contacts" className="md:hidden">

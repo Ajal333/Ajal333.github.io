@@ -15,10 +15,11 @@ module.exports = {
       blackish: "#151418",
       greyish: "#242329",
       whitish: "#FBFBFF",
+      veryGray: "#777779",
     },
     extend: {
       animation: {
-        "bounce-slow": "bounce 3.5s linear infinite",
+        "bounce-slow": "bounce 2.5s linear infinite",
       },
     },
   },

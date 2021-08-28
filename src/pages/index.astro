@@ -6,7 +6,7 @@ import Nav from '../components/Nav/index.jsx';
 import ScrollDown from "../components/ScrollDown/index.jsx";
 import Footer from '../components/Footer/index.jsx';
 import Social from "../components/Social/index.jsx";
-
+import SkillCard from "../components/SkillCard/index.jsx"
 
 ---
 <html lang="en">
@@ -36,8 +36,26 @@ import Social from "../components/Social/index.jsx";
        </section>
     </section>
     <!-- End of Landing page -->
-    <!-- <section class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative" style="background-image: url('/assets/second.svg');">
-    </section> -->
+    <section id="skills" class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative flex" style="background-image: url('/assets/second.svg');">
+    <div class="hidden flex-1 min-h-screen md:flex items-start justify-end ">
+    <img src="/assets/skills.svg" class="w-4/5 h-4/5" />
+    </div>
+    <div class="flex-1 min-h-screen md:p-6 flex items-center justify-center flex-col">
+    <h3 data-aos="fade-down" data-aos-duration="500" class="flex-1 h-1/5 flex items-end justify-center text-whitish font-bold text-2xl tracking-wider">Skills</h3>
+    <div class=" w-5/6  md:w-4/5 xl:w-3/5 h-4/5 flex flex-col md:flex-row text-whitish pt-6">
+    <div class="md:flex-1 md:p-2 p-4 md:h-4/5">
+    <SkillCard  counter=1  item="ReactJs" />
+    <SkillCard  counter=2  item="NextJs" />
+    <SkillCard  counter=3  item="ExpressJs" />
+    </div>
+    <div class="md:flex-1 md:p-2 p-4 md:h-4/5">
+    <SkillCard  counter=1  item="MongoDB" />
+    <SkillCard  counter=2  item="Python" />
+    <SkillCard  counter=3  item="Firebase" />
+    </div>
+    </div>
+    </div>
+    </section>
     <AosSetup />
   </body>
 </html>
