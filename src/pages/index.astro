@@ -22,7 +22,7 @@ import SkillCard from "../components/SkillCard/index.jsx"
   <Social />
   <!-- End of Social Links -->
   <!-- Landing page -->
-    <section id="home" class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center" style="background-image: url('/assets/landing.svg');">
+    <section id="home" class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative flex items-center justify-center z-10" style="background-image: url('/assets/landing.svg');">
       <!-- <div data-aos="fade-up" data-aos-once="false" class="absolute w-96 h-96 top-20 left-2/3 bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/blob.svg');">
       </div> -->
        <section class="xl:w-2/4 md:w-2/3 h-80 flex md:p-4" >
@@ -36,7 +36,9 @@ import SkillCard from "../components/SkillCard/index.jsx"
        </section>
     </section>
     <!-- End of Landing page -->
-    <section id="skills" class="w-screen min-h-screen bg-cover bg-center bg-no-repeat relative flex" style="background-image: url('/assets/second.svg');">
+    <section id="skills" class="w-screen  min-h-screen bg-cover bg-center bg-no-repeat relative flex" style="background-image: url('/assets/second.svg');">
+    <!-- <div  -->
+    <!-- class="bg-blackish hidden md:block md:absolute top-1/2 left-0 transform -translate-y-1/2 md:w-28 md:h-60 lg:w-36 lg:h-60 rounded-r-full"></div> -->
     <div class="hidden flex-1 min-h-screen md:flex items-start justify-end ">
     <img src="/assets/skills.svg" class="w-4/5 h-4/5" />
     </div>
@@ -56,6 +58,7 @@ import SkillCard from "../components/SkillCard/index.jsx"
     </div>
     </div>
     </section>
+    <section id="projects" class="w-screen  min-h-screen  relative flex"  ></section>
     <AosSetup />
   </body>
 </html>

@@ -8,35 +8,35 @@ const Social = () => {
         <i
           data-feather="github"
           color="white"
-          className="cursor-pointer hover:text-veryGray transition-colors duration-200"
+          className="cursor-pointer hover:text-reddish transition-colors duration-200"
         />
       </a>
       <a href="http://linkedin.com/in/ajal" target="__blank">
         <i
           data-feather="linkedin"
           color="white"
-          className="cursor-pointer hover:text-veryGray transition-colors duration-200"
+          className="cursor-pointer hover:text-reddish transition-colors duration-200"
         />
       </a>
       <a href="https://instagram.com/im_ajal" target="__blank">
         <i
           data-feather="instagram"
           color="white"
-          className="cursor-pointer hover:text-veryGray transition-colors duration-200"
+          className="cursor-pointer hover:text-reddish transition-colors duration-200"
         />
       </a>
       <a href="mailto:ajal.p1999@gmail.com">
         <i
           data-feather="send"
           color="white"
-          className="cursor-pointer hover:text-veryGray transition-colors duration-200"
+          className="cursor-pointer hover:text-reddish transition-colors duration-200"
         />
       </a>
       <a href="https://twitter.com/Ajal_333" target="__blank">
         <i
           data-feather="twitter"
           color="white"
-          className="cursor-pointer hover:text-veryGray transition-colors duration-200"
+          className="cursor-pointer hover:text-reddish transition-colors duration-200"
         />
       </a>
     </div>
