@@ -1,0 +1,49 @@
+{
+  "title": "Choose the visual world (round 2)",
+  "question": "The re-roll assigned The Viewfinder. Keep it, take an alternate, or re-roll again.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "The Viewfinder",
+      "kicker": "THE ROLL",
+      "lineage": "Macro's meal scan turned on the engineer: a camera viewfinder reading a white page",
+      "thesis": "A white page where one pair of scan brackets follows your cursor, snaps to whatever you point at, and reads it out: name, app, year, number.",
+      "palette": ["#f7f7f4", "#101210", "#2b5cff", "#8a8f88"],
+      "materials": ["off-white paper ground", "one ink blue for the brackets and the readout", "regular-weight grotesk at 9–12vw on the first screen"],
+      "viewport": "Words only on the first screen: a two-line statement in my own voice at 10vw across the full width, one supporting sentence bottom-left, Email me bottom-right. The brackets sit around the first word and move to whatever you hover; the readout under them says what it is.",
+      "risk": "A cursor effect that becomes a gimmick if the brackets do not also work on a phone (there they snap to the section in view) and if the readouts say nothing real.",
+      "raised": [
+        {"from": "challenger-jcard", "raise": "Every role and project carries its running time, right-aligned tight against the margin, so the list reads like a tracklist that adds up."},
+        {"from": "challenger-botanical", "raise": "Entries sit at one fixed scale on one shared baseline; nothing on the page is bigger because it is newer."},
+        {"from": "challenger-blacksmith", "raise": "The brackets' readout is a measurement: a number, a year, a platform, never a slogan."},
+        {"from": "challenger-cracktro", "raise": "When the brackets lock on something, everything else holds still; motion lives only in the thing being read."}
+      ],
+      "comp": ".impeccable/mocks/decision/round2-assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "The Demo-day Deck",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "the founder's pitch slide: one claim, one number, full screen",
+      "thesis": "The page as the deck I would pitch with: each screen one claim in huge type with one figure, paged with the keyboard or a scroll snap.",
+      "palette": ["#ffffff", "#111111", "#ff4d1f"],
+      "materials": ["white slides", "one accent on the figure", "scroll-snapped screens"],
+      "viewport": "Slide one: 'I build apps people actually use.' and nothing else; a pager at the bottom edge.",
+      "risk": "Also the direction most founder portfolios reach for; the pager and snap can fight the scroll on phones.",
+      "comp": ".impeccable/mocks/decision/round2-pick.png"
+    },
+    {"id": "challenger-jcard", "kind": "challenger", "catalogId": "vernacular-ephemera-cassette-j-card", "label": "Cassette J-card", "verdict": "declined", "lineage": "hand-lettered mixtape inlays", "thesis": "The CV as a ballpoint tracklist timed to the minute.", "palette": ["#ffffff", "#1d3fbf", "#d81e1e"], "materials": ["lined inlay stock", "ballpoint"], "viewport": "A folded card; side A and side B.", "case": "Hiring managers do not identify with mixtapes; handwriting fights a minimal brief.", "kept": "Running times right-aligned against the margin.", "risk": "Costume.", "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-cassette-j-card-hero.webp"},
+    {"id": "challenger-botanical", "kind": "challenger", "catalogId": "editorial-sequence-montage-botanical-folio-season", "label": "Botanical Folio", "verdict": "declined", "lineage": "seasonal botanical plates", "thesis": "The career as five plates of one plant.", "palette": ["#f4efe2", "#4b3b2a", "#3f7a3a", "#b3121b"], "materials": ["cream plates", "sepia hairlines"], "viewport": "Five plates on one baseline.", "case": "Cream and hairline rules are the look the brief excludes, and plants say nothing about shipping software.", "kept": "Fixed scale on one shared baseline.", "risk": "Reads as a print shop.", "hero": "https://impeccable.style/worlds/cards/editorial-sequence-montage-botanical-folio-season-hero.webp"},
+    {"id": "challenger-blacksmith", "kind": "challenger", "catalogId": "metal-forging-patina-blacksmith-scale-shower", "label": "Blacksmith Scale Shower", "verdict": "declined", "lineage": "power-hammer forging", "thesis": "Each job as a hammer blow.", "palette": ["#141210", "#ff7a1a", "#6b6b6b"], "materials": ["forge-dark ground", "stencil caps"], "viewport": "One blow per row.", "case": "Dark and loud; you asked for light and minimal.", "kept": "Readings as numbers, before and after.", "risk": "Costume.", "hero": "https://impeccable.style/worlds/cards/metal-forging-patina-blacksmith-scale-shower-hero.webp"},
+    {"id": "challenger-cracktro", "kind": "challenger", "catalogId": "operate-c-cracktro-scroller-queue", "label": "Cracktro Scroller", "verdict": "declined", "lineage": "demo-scene title screens", "thesis": "Bitmap text drifting over a void.", "palette": ["#000000", "#e9e4d2", "#ffb000"], "materials": ["black void", "bitmap face"], "viewport": "One line of bitmap text, dust drifting behind.", "case": "A black void is the opposite of the light page you asked for.", "kept": "Focus freezes the front plane; motion only where you are reading.", "risk": "Retro costume.", "hero": "https://impeccable.style/worlds/cards/operate-c-cracktro-scroller-queue-hero.webp"},
+    {"id": "challenger-segment", "kind": "challenger", "catalogId": "signals-instruments-seven-segment-alarm-clock", "label": "Seven-segment Display", "verdict": "declined", "lineage": "bedside clocks and scoreboards", "thesis": "Every figure as lit segments.", "palette": ["#0b0b0b", "#ff2a2a", "#2a2a2a"], "materials": ["LED red on near-black"], "viewport": "Four red digits.", "case": "Dark and a gadget.", "kept": "Absence drawn as deliberately as presence.", "risk": "Costume.", "hero": "https://impeccable.style/worlds/cards/signals-instruments-seven-segment-alarm-clock-hero.webp"},
+    {"id": "challenger-neon", "kind": "challenger", "catalogId": "magnetism-electricity-plasma-hand-bent-neon-circuit", "label": "Hand-bent Neon", "verdict": "declined", "lineage": "neon sign fabrication", "thesis": "The name as one continuous glass stroke.", "palette": ["#0a0a12", "#2f6bff", "#ff5a3c"], "materials": ["dark room", "cobalt glow"], "viewport": "One word ignites.", "case": "Dark, and glow is banned by the brief.", "kept": "One continuous element moves as a single stroke.", "risk": "Glow.", "hero": "https://impeccable.style/worlds/cards/magnetism-electricity-plasma-hand-bent-neon-circuit-hero.webp"}
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {"kind": "canon", "label": "The category standard", "thesis": "The developer portfolio everyone ships: white page, name, one line, project cards, skills, executed impeccably.", "palette": ["#ffffff", "#111111", "#2563eb"], "materials": ["clean grid", "project cards"], "viewport": "Name and one sentence, a button, cards below.", "risk": "Indistinguishable from every other candidate's site."},
+  "steer": true
+}

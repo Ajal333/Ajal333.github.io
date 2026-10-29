@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+// A fixed 1200x630 card captured once into public/og.png. Not linked from the site.
+---
+
+<Base title="Ajal P" description="Open Graph card for ajal333.github.io" path="/og" noindex>
+  <main class="og">
+    <span class="og__line" aria-hidden="true"><span class="og__pulse"></span></span>
+    <p class="og__mark">Ajal P</p>
+    <h1 class="og__statement">Apps people<br />actually use.</h1>
+    <p class="og__intro">Full-stack engineer and co-founder. CTO at Zorest. Kerala, India.</p>
+    <p class="og__url">ajal333.github.io</p>
+  </main>
+</Base>
+
+<style is:global>
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  .js * { animation: none !important; transition: none !important; }
+</style>
+<style>
+  .og { position: relative; width: 1200px; height: 630px; padding: 56px 72px; background: var(--bg); }
+  .og__line { position: absolute; left: 420px; top: 0; bottom: 0; width: 4px; background: var(--past); }
+  .og__pulse { position: absolute; left: 0; top: 150px; width: 4px; height: 140px; background: var(--accent); }
+  .og__mark { font-weight: 500; font-size: 22px; }
+  .og__statement { position: absolute; left: 448px; bottom: 150px; font-size: 92px; line-height: 0.95; letter-spacing: -0.04em; font-weight: 500; }
+  .og__intro { position: absolute; left: 72px; bottom: 150px; width: 300px; font-size: 20px; line-height: 1.4; color: var(--muted); }
+  .og__url { position: absolute; left: 448px; bottom: 72px; font-size: 20px; color: var(--muted); }
+</style>

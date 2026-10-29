@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  noindex?: boolean;
+}
+
+const { title, description, path = '/', noindex = false } = Astro.props;
+const site = 'https://ajal333.github.io';
+const canonical = path === '/' ? site + '/' : site + path;
+const ogImage = site + '/og.png';
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ajal P',
+  alternateName: 'Ajal333',
+  url: site + '/',
+  jobTitle: 'Full-stack engineer, co-founder and CTO',
+  worksFor: { '@type': 'Organization', name: 'Zorest', url: 'https://zorest.com' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'School of Engineering, CUSAT' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Palakkad', addressRegion: 'Kerala', addressCountry: 'IN' },
+  email: 'mailto:ajal.p1999@gmail.com',
+  sameAs: [
+    'https://github.com/Ajal333',
+    'https://www.linkedin.com/in/ajal/',
+    'https://linktr.ee/ajal.p',
+    'https://twitter.com/Ajal_333',
+    'https://instagram.com/im_ajal',
+  ],
+  knowsAbout: ['TypeScript', 'React', 'React Native', 'Node.js', 'Python', 'LLM integration', 'AWS', 'GCP', 'Multi-tenant SaaS'],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
+    <meta name="author" content="Ajal P" />
+    <meta name="theme-color" content="#f5f5f2" />
+    <meta name="color-scheme" content="light" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Ajal P" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ajal P: I build apps people actually use." />
+    <meta property="profile:first_name" content="Ajal" />
+    <meta property="profile:last_name" content="P" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Ajal_333" />
+    <meta name="twitter:creator" content="@Ajal_333" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/chivo.woff2" as="font" type="font/woff2" crossorigin />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

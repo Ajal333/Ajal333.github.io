@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T14:30:00Z",
+  "title": "Design System: Ajal P",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Paper", "canonical": "oklch(96.9% 0.004 106)", "tonalRamp": ["#0b0b09", "#252523", "#424240", "#61615f", "#828280", "#a5a5a2", "#c9c9c6", "#efefec"] },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "oklch(93.9% 0.005 107)", "tonalRamp": ["#0b0b09", "#252522", "#42423f", "#61615e", "#82827f", "#a5a5a1", "#c9c9c5", "#efefeb"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "oklch(20.9% 0.004 264)", "tonalRamp": ["#0a0b0d", "#242527", "#414244", "#606164", "#818285", "#a4a5a8", "#c8c9cc", "#edeef1"] },
+      "muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "oklch(49.2% 0.009 132)", "tonalRamp": ["#0a0c08", "#232622", "#40433e", "#5f625d", "#80837e", "#a3a6a1", "#c7cac5", "#ecf0ea"] },
+      "past": { "role": "neutral", "displayName": "Past", "canonical": "oklch(85.8% 0.007 124)", "tonalRamp": ["#0a0c08", "#242622", "#41433f", "#60625e", "#81837e", "#a4a6a1", "#c8cac5", "#edefea"] },
+      "accent": { "role": "primary", "displayName": "Pulse Blue", "canonical": "oklch(55.3% 0.247 264)", "tonalRamp": ["#020921", "#00156b", "#0029af", "#0f4ae7", "#3071ff", "#5e9cff", "#97c7ff", "#ddefff"] },
+      "accent-ink": { "role": "primary", "displayName": "Pulse Ink", "canonical": "#ffffff", "tonalRamp": ["#0b0b0b", "#252525", "#424242", "#616161", "#828282", "#a5a5a5", "#c9c9c9", "#ffffff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero statement only, two masked lines; also the 404 heading. Steps to clamp(2.6rem, 11.5vw, 5rem) under 64em." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, stack item names, contact rows (-0.035em) and the footer invitation." },
+      "title": { "displayName": "Title", "purpose": "Node names (the toggle buttons), project names, and the Reach me heading." },
+      "body": { "displayName": "Body", "purpose": "All reading text, nav links and buttons (buttons at 500). Node bodies cap at 60ch, asides at 30ch." },
+      "label": { "displayName": "Label", "purpose": "Years and durations, stack notes, the footer legal line. Tabular figures, sentence case." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Press scale, reveal rises, dot scale, arrow and stack-name translation." },
+      { "name": "ease-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The line drawing in on load, the statement line-rise, node open and close (500ms)." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.76, 0, 0.24, 1)", "purpose": "Declared on :root; not used by any rule in the build." },
+      { "name": "t-press", "value": "140ms", "purpose": "Button press scale to 0.96." },
+      { "name": "t-hover", "value": "180ms", "purpose": "Colour and background swaps on hover, link underline fade." },
+      { "name": "t-ui", "value": "400ms", "purpose": "Dot colour and scale, stack note entry, arrow push." },
+      { "name": "node-open", "value": "500ms", "purpose": "grid-template-rows 0fr to 1fr with ease-expo; inner visibility delayed 500ms on close." },
+      { "name": "line-draw", "value": "1400ms", "purpose": "scaleY from 0 with ease-expo, 100ms delay, on load." },
+      { "name": "line-up", "value": "900ms", "purpose": "Statement lines rising through overflow masks, 110ms stagger starting at 250ms." },
+      { "name": "rise", "value": "600ms", "purpose": "Hero intro and CTA rising 12px, delays 520ms and 620ms." },
+      { "name": "reveal", "value": "600ms / 800ms", "purpose": "Scroll reveals: opacity 600ms and 20px translate 800ms, 90ms stagger per --i; list children 500/700ms, 70ms apart." },
+      { "name": "pulse-track", "value": "120ms linear", "purpose": "The fixed pulse following scroll progress; removed under prefers-reduced-motion: reduce." },
+      { "name": "figure-roll", "value": "700ms", "purpose": "Figures count from 0 to their real value once with a cubic ease-out, in script." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "max-width: 63.9em", "purpose": "Axis moves to 1.125rem from the left edge, margin becomes 2.625rem, every grid collapses to one column padded calc(var(--axis) + 1.5rem)." }
+    ],
+    "layout": {
+      "axis": "42% (1.125rem under 64em)",
+      "line": "4px",
+      "pulse": "4px x 140px, fixed, translateY = scrollProgress * (innerHeight - 140)",
+      "offAxisGap": "1.5rem",
+      "margin": "clamp(1.25rem, 3.3vw, 3rem) (2.625rem under 64em)",
+      "section": "clamp(7rem, 12vw, 12rem)",
+      "stickyTop": "6rem",
+      "heroMinHeight": "84svh (calc(100svh - 6.5rem) under 64em)"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The Email me control: blue block that inverts to ink on hover and presses to 0.96.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Email me</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 1.5rem; background: var(--accent, #1f5eff); color: var(--accent-ink, #ffffff); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; font-size: 1.0625rem; font-weight: 500; text-decoration: none; white-space: nowrap; border: 0; border-radius: 0; cursor: pointer; transition: transform 140ms cubic-bezier(0.22, 1, 0.36, 1), background-color 180ms ease, color 180ms ease; } .ds-btn:hover { background: var(--ink, #17181a); color: var(--bg, #f5f5f2); } .ds-btn:active { transform: scale(0.96); } .ds-btn:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Paper-on-ink variant used on the footer; hovers to blue.",
+      "html": "<div class=\"ds-foot\"><a class=\"ds-btn-inverse\" href=\"#\">Email me</a></div>",
+      "css": ".ds-foot { background: var(--ink, #17181a); padding: 1.5rem; } .ds-btn-inverse { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 1.5rem; background: var(--bg, #f5f5f2); color: var(--ink, #17181a); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; font-size: 1.0625rem; font-weight: 500; text-decoration: none; white-space: nowrap; border: 0; border-radius: 0; transition: transform 140ms cubic-bezier(0.22, 1, 0.36, 1), background-color 180ms ease, color 180ms ease; } .ds-btn-inverse:hover { background: var(--accent, #1f5eff); color: var(--accent-ink, #ffffff); } .ds-btn-inverse:active { transform: scale(0.96); } .ds-btn-inverse:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Link",
+      "kind": "nav",
+      "refersTo": "link",
+      "description": "Inline and nav link: underline fades in and the text turns blue on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">Work</a>",
+      "css": ".ds-link { color: var(--ink, #17181a); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; font-size: 1.0625rem; font-weight: 400; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.22em; text-decoration-thickness: 0.08em; transition: text-decoration-color 180ms ease, color 180ms ease; } .ds-link:hover { text-decoration-color: currentColor; color: var(--accent, #1f5eff); } .ds-link:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Top Row",
+      "kind": "nav",
+      "refersTo": "link",
+      "description": "Wordmark at the margin, links starting 1.5rem past the axis, the primary button at the right margin.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-top__mark\" href=\"#\">Ajal P</a><nav class=\"ds-top__nav\"><a class=\"ds-link\" href=\"#\">Work</a><a class=\"ds-link\" href=\"#\">Stack</a><a class=\"ds-link\" href=\"#\">Contact</a></nav><a class=\"ds-btn\" href=\"#\">Email me</a></header>",
+      "css": ".ds-top { position: relative; display: grid; grid-template-columns: 42% 1fr auto; align-items: center; padding: 2.25rem 0 0; font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; font-size: 1.0625rem; background: var(--bg, #f5f5f2); color: var(--ink, #17181a); } .ds-top::before { content: ''; position: absolute; left: 42%; top: 0; bottom: -2rem; width: 4px; background: var(--past, #cfd1cc); } .ds-top__mark { text-decoration: none; font-weight: 500; padding-left: 2rem; color: inherit; } .ds-top__nav { display: flex; gap: 2rem; padding-left: 1.5rem; } .ds-top > .ds-btn { justify-self: end; margin-right: 2rem; } .ds-link { color: inherit; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 0.22em; text-decoration-thickness: 0.08em; transition: text-decoration-color 180ms ease, color 180ms ease; } .ds-link:hover { text-decoration-color: currentColor; color: var(--accent, #1f5eff); } .ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: 0 1.5rem; background: var(--accent, #1f5eff); color: var(--accent-ink, #ffffff); font-weight: 500; text-decoration: none; white-space: nowrap; transition: transform 140ms cubic-bezier(0.22, 1, 0.36, 1), background-color 180ms ease, color 180ms ease; } .ds-btn:hover { background: var(--ink, #17181a); color: var(--bg, #f5f5f2); } .ds-btn:active { transform: scale(0.96); }"
+    },
+    {
+      "name": "Node",
+      "kind": "custom",
+      "refersTo": "node-dot",
+      "description": "The unit that hangs on the line: years left of the axis, a square dot on the line, name and role to the right. Open state turns the dot and name blue.",
+      "html": "<ol class=\"ds-nodes\"><li class=\"ds-node is-open\"><div class=\"ds-node__left\"><span class=\"ds-node__years\">2025 to now</span><span class=\"ds-node__dur\">1 yr 6 mo</span></div><span class=\"ds-node__dot\"></span><div class=\"ds-node__body\"><h3 class=\"ds-node__h\"><button class=\"ds-node__toggle\" type=\"button\" aria-expanded=\"true\">Zorest</button> <span class=\"ds-node__role\">Co-founder and CTO</span></h3><p class=\"ds-node__lead\">An app studio I co-founded. I own the architecture, the engineering and every release.</p></div></li><li class=\"ds-node\"><div class=\"ds-node__left\"><span class=\"ds-node__years\">2023 to 2025</span><span class=\"ds-node__dur\">2 yr</span></div><span class=\"ds-node__dot\"></span><div class=\"ds-node__body\"><h3 class=\"ds-node__h\"><button class=\"ds-node__toggle\" type=\"button\" aria-expanded=\"false\">XENA Intelligence</button> <span class=\"ds-node__role\">Product Engineer</span></h3><p class=\"ds-node__lead\">A Techstars ’22 company building an AI growth platform.</p></div></li></ol>",
+      "css": ".ds-nodes { position: relative; list-style: none; margin: 0; padding: 0; background: var(--bg, #f5f5f2); color: var(--ink, #17181a); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; } .ds-nodes::before { content: ''; position: absolute; left: 42%; top: 0; bottom: 0; width: 4px; background: var(--past, #cfd1cc); } .ds-node { position: relative; display: grid; grid-template-columns: 42% 1fr; padding: 1.75rem 0; } .ds-node__left { display: grid; justify-items: start; gap: 0.2rem; padding-left: 2rem; padding-right: 1.5rem; font-size: 0.8125rem; color: var(--muted, #5f625d); font-variant-numeric: tabular-nums; } .ds-node__years { color: var(--ink, #17181a); } .ds-node__dur { justify-self: end; } .ds-node__dot { position: absolute; left: calc(42% + 2px); top: calc(1.75rem + 0.55em); width: 14px; height: 14px; background: var(--past, #cfd1cc); transform: translateX(-50%); transition: background-color 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-node__body { padding-left: 1.5rem; padding-right: 2rem; display: grid; gap: 0.6rem; max-width: 60ch; } .ds-node__h { margin: 0; font-size: 1.25rem; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em; display: flex; flex-wrap: wrap; gap: 0 0.75rem; align-items: baseline; } .ds-node__toggle { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; font-weight: 500; transition: color 180ms ease; } .ds-node__toggle:hover { color: var(--accent, #1f5eff); } .ds-node__toggle:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; } .ds-node__role { color: var(--muted, #5f625d); font-weight: 400; font-size: 1.0625rem; letter-spacing: 0; } .ds-node__lead { margin: 0; font-size: 1.0625rem; line-height: 1.5; } .ds-node.is-open .ds-node__dot { background: var(--accent, #1f5eff); transform: translateX(-50%) scale(1.5); } .ds-node.is-open .ds-node__toggle { color: var(--accent, #1f5eff); }"
+    },
+    {
+      "name": "Contact Row",
+      "kind": "card",
+      "refersTo": "row",
+      "description": "Headline-size address rows from the axis to the margin; even rows take the surface tint; hover inverts and pushes the arrow.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span>ajal.p1999@gmail.com</span><svg class=\"ds-row__arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 12h17M13 5l7 7-7 7\"/></svg></a></li><li><a class=\"ds-row\" href=\"#\"><span>LinkedIn</span><svg class=\"ds-row__arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 12h17M13 5l7 7-7 7\"/></svg></a></li><li><span class=\"ds-row ds-row--still\"><span>Palakkad, Kerala</span></span></li></ul>",
+      "css": ".ds-rows { position: relative; list-style: none; margin: 0; padding: 0; background: var(--bg, #f5f5f2); color: var(--ink, #17181a); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; } .ds-rows::before { content: ''; position: absolute; left: 42%; top: 0; bottom: 0; width: 4px; background: var(--past, #cfd1cc); z-index: 0; } .ds-rows li { position: relative; z-index: 1; } .ds-row { display: flex; justify-content: space-between; align-items: baseline; gap: 2rem; padding: 1.4rem 2rem 1.2rem calc(42% + 1.5rem); font-size: 2rem; line-height: 1; letter-spacing: -0.035em; font-weight: 500; color: inherit; text-decoration: none; overflow-wrap: anywhere; transition: background-color 180ms ease, color 180ms ease; } .ds-rows li:nth-child(even) .ds-row { background: var(--surface, #ebebe7); margin-left: calc(42% + 4px); padding-left: calc(1.5rem - 4px); } .ds-row__arrow { width: 0.55em; height: 0.55em; flex: none; align-self: center; transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-row__arrow path { fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: square; stroke-linejoin: miter; } .ds-row--still { color: var(--muted, #5f625d); } a.ds-row:hover { background: var(--ink, #17181a); color: var(--bg, #f5f5f2); } a.ds-row:hover .ds-row__arrow { transform: translateX(0.5em); } a.ds-row:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "card",
+      "refersTo": "row",
+      "description": "Name over description with the year right-aligned; even rows tinted; whole row inverts on hover.",
+      "html": "<ul class=\"ds-made\"><li><a class=\"ds-made__row\" href=\"#\"><span>Sahaay</span><span>Helped people find the resources they needed during the pandemic.</span><span>2020</span></a></li><li><a class=\"ds-made__row\" href=\"#\"><span>MessedUp</span><span>Ran the mess for my college hostel.</span><span>2021</span></a></li></ul>",
+      "css": ".ds-made { list-style: none; margin: 0; padding: 0; background: var(--bg, #f5f5f2); color: var(--ink, #17181a); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; font-size: 1.0625rem; line-height: 1.5; } .ds-made__row { display: grid; grid-template-columns: 1fr auto; column-gap: 1.5rem; align-items: baseline; padding: 1rem 2rem 1rem 1.5rem; color: inherit; text-decoration: none; transition: background-color 180ms ease, color 180ms ease; } .ds-made__row > :nth-child(1) { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.02em; grid-column: 1; } .ds-made__row > :nth-child(2) { grid-column: 1; color: var(--muted, #5f625d); } .ds-made__row > :nth-child(3) { grid-column: 2; grid-row: 1; color: var(--muted, #5f625d); font-variant-numeric: tabular-nums; } .ds-made li:nth-child(even) .ds-made__row { background: var(--surface, #ebebe7); margin-left: 4px; padding-left: calc(1.5rem - 4px); } .ds-made__row:hover { background: var(--ink, #17181a); color: var(--bg, #f5f5f2); } .ds-made__row:hover > * { color: inherit; } .ds-made__row:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Stack Item",
+      "kind": "chip",
+      "refersTo": "link",
+      "description": "Headline-size tool name whose note appears on hover or focus while the name turns blue and shifts right.",
+      "html": "<ul class=\"ds-stack\"><li class=\"ds-stack__item\" tabindex=\"0\"><span class=\"ds-stack__name\">TypeScript</span><span class=\"ds-stack__note\">Most of what I write, front and back.</span></li><li class=\"ds-stack__item\" tabindex=\"0\"><span class=\"ds-stack__name\">PostgreSQL and MongoDB</span><span class=\"ds-stack__note\">Plus an AWS lakehouse on S3, Athena and RDS.</span></li></ul>",
+      "css": ".ds-stack { list-style: none; margin: 0; padding: 0; background: var(--bg, #f5f5f2); color: var(--ink, #17181a); font-family: Chivo, 'Helvetica Neue', Arial, sans-serif; } .ds-stack__item { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 1.25rem; padding: 0.35rem 2rem 0.35rem 1.5rem; cursor: default; } .ds-stack__name { font-size: 2rem; line-height: 1.1; letter-spacing: -0.03em; font-weight: 500; transition: color 180ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-stack__note { font-size: 0.8125rem; color: var(--muted, #5f625d); max-width: 34ch; opacity: 0; transform: translateX(-8px); transition: opacity 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-stack__item:hover .ds-stack__note, .ds-stack__item:focus-visible .ds-stack__note { opacity: 1; transform: none; } .ds-stack__item:hover .ds-stack__name, .ds-stack__item:focus-visible .ds-stack__name { color: var(--accent, #1f5eff); transform: translateX(0.25em); } .ds-stack__item:focus-visible { outline: 3px solid var(--accent, #1f5eff); outline-offset: 4px; }"
+    },
+    {
+      "name": "Line and Pulse",
+      "kind": "custom",
+      "refersTo": "node-dot",
+      "description": "The 4px past-grey line on the 42% axis with the 140px blue pulse that rides it; a closed and an open 14px dot sit on it.",
+      "html": "<div class=\"ds-pipe\"><span class=\"ds-pipe__line\"></span><span class=\"ds-pipe__pulse\"></span><span class=\"ds-pipe__dot\" style=\"top: 40px\"></span><span class=\"ds-pipe__dot is-open\" style=\"top: 140px\"></span></div>",
+      "css": ".ds-pipe { position: relative; height: 260px; background: var(--bg, #f5f5f2); } .ds-pipe__line { position: absolute; left: 42%; top: 0; bottom: 0; width: 4px; background: var(--past, #cfd1cc); } .ds-pipe__pulse { position: absolute; left: 42%; top: 80px; width: 4px; height: 140px; background: var(--accent, #1f5eff); } .ds-pipe__dot { position: absolute; left: calc(42% + 2px); width: 14px; height: 14px; background: var(--past, #cfd1cc); transform: translateX(-50%); transition: background-color 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-pipe__dot.is-open { background: var(--accent, #1f5eff); transform: translateX(-50%) scale(1.5); } .ds-pipe:hover .ds-pipe__dot:not(.is-open) { background: var(--accent, #1f5eff); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pipeline",
+    "overview": "One unbroken 4px line runs the full height of the page on a vertical axis at 42% of the viewport width, and everything Ajal has made hangs on it as a node. A fixed 140px blue pulse rides the line in step with the scroll; the node whose dot it passes opens. The page is almost entirely type: no imagery, no illustration, no card grid, no hero picture. Paper, ink, one grey for the past, and a single blue that belongs to the line and whatever the line is currently pointing at.\n\nDensity is low and the rhythm is long. Sections are separated by a vertical interval of 7 to 12rem, the hero leaves its upper 60% empty so the line can enter alone, and the sticky asides to the left of the axis hold one short paragraph each. Everything right of the axis sits exactly 1.5rem off it, which makes the line read as the left edge of the content rather than as decoration.\n\nInteraction replaces decoration. Controls invert on hover (blue to ink, ink to paper), the open node's dot swells and turns blue, stack items slide a quarter-em to the right and disclose their note, contact rows invert whole and push their arrow. Everything is hard-edged and flat: square corners, flat fills, no shadows, no gradients, no hairlines. Confirmed rejections from the build: a dark ground, app screenshots or drawn phone fragments, a stretched wordmark, badges, and card layouts.",
+    "keyCharacteristics": [
+      "One 4px line (`--line`) on a 42% axis (`--axis`), 1.125rem on screens under 64em; it is the only rule on the page.",
+      "A fixed 140px blue pulse rides the line with the scroll; the nearest node opens.",
+      "Accent blue appears only on the pulse, the open node, the primary button, focus rings, selection and hover.",
+      "One family, Chivo variable: 500 for the statement and all headings, 400 for text; sentence case throughout.",
+      "Flat, square, hairline-free. Alternating rows use a surface tint, never a border.",
+      "Every animation is gated behind `prefers-reduced-motion: no-preference`; the pulse is removed entirely under `reduce`."
+    ],
+    "rules": [
+      { "name": "The One Blue Rule", "body": "Blue belongs to the pulse and to the thing the pulse is pointing at. At rest, exactly one node dot and one button carry it; everything else earns it only through hover, focus or selection. Never tint a background or a paragraph with it.", "section": "colors" },
+      { "name": "The Invert Rule", "body": "Hover and press do not lighten or glow; they swap ground and ink wholesale. Blue button to ink/paper, paper button to blue/white, paper row to ink/paper. Hover rules are wrapped in `(hover: hover) and (pointer: fine)` so touch devices never see a stuck state.", "section": "colors" },
+      { "name": "The Two Weights Rule", "body": "Chivo at 500 for anything that names or declares (statement, headings, node names, buttons, figures, toggle text); 400 for anything you read. No other weight is used even though the file carries 100 to 900.", "section": "typography" },
+      { "name": "The Tighter-As-It-Grows Rule", "body": "Tracking tightens with size: 0 at body and label, -0.02em at title, -0.03em at headline, -0.04em at display. Line-height closes the same way: 1.5, 1.2, 1, 0.95.", "section": "typography" },
+      { "name": "The Off-Axis Rule", "body": "Anything right of the line starts exactly 1.5rem from the axis, at every breakpoint. Alternating surface bands start at the axis plus the line's width so the line stays visible against them.", "section": "layout" },
+      { "name": "The No-Shadow Rule", "body": "Nothing casts a shadow, at rest or on hover. If a surface needs to separate, it takes the surface tint or inverts.", "section": "elevation" },
+      { "name": "The No-Hairline Rule", "body": "The 4px line is the only rule on the page. Rows, lists and sections are never divided by borders; they are divided by the surface band or by whitespace.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do hang every new element on the axis: left column padded by `--margin` outside and 1.5rem inside, right column starting 1.5rem past the axis.",
+      "Do separate repeated rows with the surface tint on even rows, offset by the line's width so the line stays visible.",
+      "Do invert on hover (ground and ink swap) and keep hover rules inside `(hover: hover) and (pointer: fine)`.",
+      "Do use Chivo 500 for names and headings and 400 for reading text, sentence case, with tracking from 0 to -0.04em as size grows.",
+      "Do set figures in tabular numerals and write the final value in the HTML before any rolling animation.",
+      "Do gate every animation behind `prefers-reduced-motion: no-preference` and keep the page fully readable with no script (nodes open, line visible).",
+      "Do keep the accent to the pulse, the one open node, the primary button, focus, selection and hover."
+    ],
+    "donts": [
+      "Don't add shadows, gradients, blurs or glows anywhere, including on hover.",
+      "Don't draw borders or hairlines; the 4px line is the only rule on the page.",
+      "Don't round a corner; every box, dot and button is square.",
+      "Don't introduce a second colour, a second family, uppercase labels, kickers or eyebrows above headings.",
+      "Don't add raster imagery, illustrations, app screenshots or drawn phone screens; the page is type and one line.",
+      "Don't return to a dark page ground; ink ground is reserved for the footer and for hover inversion.",
+      "Don't open more than one node at a time or let a node open without its dot turning blue."
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Choose the visual world (round 3)",
+  "question": "The re-roll assigned The Pipeline. Keep it, take an alternate, or re-roll again.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "The Pipeline",
+      "kicker": "THE ROLL",
+      "lineage": "the data pipeline diagram I draw at work: nodes and one line that carries data through them",
+      "thesis": "A white page built as one unbroken line. Everything I have made sits on it as a node; a pulse travels the line as you scroll, and the node under your cursor opens.",
+      "palette": ["#f5f5f2", "#17181a", "#1f5eff", "#9a9d99"],
+      "materials": ["paper-white ground", "one 4px ink line running the whole page", "one blue for the pulse and the open node", "regular-weight grotesk at 8–10vw for the statement"],
+      "viewport": "Words only: 'I build apps people actually use.' on two lines at 10vw, the line entering from the top edge and threading under the statement to the first node (Zorest, now). One supporting sentence bottom-left, Email me bottom-right. The pulse starts moving the moment the page loads.",
+      "risk": "A line-and-nodes page can read as a roadmap graphic; it must stay mostly type, with the line thin and the nodes plain words.",
+      "raised": [
+        {"from": "challenger-drum", "raise": "One unbroken line is the page's spine and a chase light runs it: the pulse is the signature motion."},
+        {"from": "challenger-orizuru", "raise": "One dot marks the active step; only one node is open at a time."},
+        {"from": "challenger-cloud", "raise": "Colour lives only on the line and the open node; all text stays achromatic."},
+        {"from": "challenger-onebit", "raise": "Pressing inverts: every control has a hard pressed state, no soft hover glow."},
+        {"from": "challenger-zoot", "raise": "Past roles sit in a lighter tone of ink, embossed without colour; only the current node takes the blue."}
+      ],
+      "comp": ".impeccable/mocks/decision/round3-assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "The Changelog",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "release notes, the page every engineer reads weekly",
+      "thesis": "My career as a changelog: dated entries, newest first, each one a shipped thing, with the version number as the only ornament.",
+      "palette": ["#ffffff", "#111111", "#0a7a3b"],
+      "materials": ["white page", "dated entries", "one green for 'current'"],
+      "viewport": "'I build apps people actually use.' at 8vw, then the first entry: 2025, Zorest, what shipped.",
+      "risk": "Familiar to every developer; the most common shape for an engineer's site after the card grid.",
+      "comp": ".impeccable/mocks/decision/round3-pick.png"
+    },
+    {"id": "challenger-onebit", "kind": "challenger", "catalogId": "medium-native-one-bit-desktop", "label": "One-bit Desktop", "verdict": "declined", "lineage": "early Macintosh desktop", "thesis": "The page as dithered windows with marching ants.", "palette": ["#ffffff", "#000000"], "materials": ["ordered dither", "one-pixel chrome"], "viewport": "Overlapping windows.", "case": "Retro chrome contradicts a minimal modern brief.", "kept": "Pressing inverts; hard control states.", "risk": "Costume.", "hero": "https://impeccable.style/worlds/cards/medium-native-one-bit-desktop-hero.webp"},
+    {"id": "challenger-drum", "kind": "challenger", "catalogId": "signals-instruments-drum-machine-step-row", "label": "Drum-machine Step Row", "verdict": "declined", "lineage": "early-80s rhythm machines", "thesis": "Sixteen steps under a chase light.", "palette": ["#2a2a2a", "#e63329", "#f5a623", "#ffffff"], "materials": ["charcoal panel", "candy keys"], "viewport": "One unbroken row of keys.", "case": "Dark panel and candy keys; nothing a hiring manager reads as an engineer.", "kept": "One unbroken line with a chase light running it.", "risk": "Toy.", "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp"},
+    {"id": "challenger-orizuru", "kind": "challenger", "catalogId": "paper-folds-pleats-deployable-orizuru-crane-sequence", "label": "Orizuru Crane", "verdict": "declined", "lineage": "origami fold sequences", "thesis": "Thirty-two folds of one sheet.", "palette": ["#d93a1f", "#ffffff", "#c9a227", "#111111"], "materials": ["vermilion washi", "crease lines"], "viewport": "A red square, step one.", "case": "Beautiful, but origami is nobody's reading of a software engineer.", "kept": "One dot marks the active step.", "risk": "Decoration.", "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-orizuru-crane-sequence-hero.webp"},
+    {"id": "challenger-cloud", "kind": "challenger", "catalogId": "clouds-storms-auroras-iridescent-cloud-edge", "label": "Iridescent Cloud Edge", "verdict": "declined", "lineage": "cloud optics", "thesis": "White page with colour only at hairline edges.", "palette": ["#ffffff", "#4a5058", "#b8f0d8", "#f4c6d6", "#c9b8f0"], "materials": ["cloud white", "pastel fringes"], "viewport": "Thin humanist sans, wide margins.", "case": "Light and quiet, but pastel fringes and hairlines are both excluded by the house rules.", "kept": "Colour confined to edges; text stays achromatic.", "risk": "Reads as a wellness brand.", "hero": "https://impeccable.style/worlds/cards/clouds-storms-auroras-iridescent-cloud-edge-hero.webp"},
+    {"id": "challenger-emigre", "kind": "challenger", "catalogId": "emigre-bitmap-specimen", "label": "Emigre Bitmap Specimen", "verdict": "declined", "lineage": "Emigre magazine type specimens", "thesis": "Coarse pixel type at poster scale.", "palette": ["#ffffff", "#000000", "#ff2d95"], "materials": ["newsprint", "bitmap display"], "viewport": "A pixel headline over justified columns.", "case": "Pixel type reads as retro, not minimal.", "kept": "One form repeated honestly at several sizes.", "risk": "Costume.", "hero": "https://impeccable.style/worlds/cards/emigre-bitmap-specimen-hero.webp"},
+    {"id": "challenger-zoot", "kind": "challenger", "catalogId": "posters-covers-sleeves-pachuco-zoot-handbill", "label": "Zoot Handbill", "verdict": "declined", "lineage": "1940s dance-hall handbills", "thesis": "Stacked billing in plum and ochre.", "palette": ["#f3ead8", "#5a2a4a", "#c98a2e"], "materials": ["letterpress", "scalloped border"], "viewport": "A silhouette and stacked caps.", "case": "Cream, two-ink letterpress; the opposite of the brief.", "kept": "Past dates emboss without ink.", "risk": "Costume.", "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-pachuco-zoot-handbill-hero.webp"}
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {"kind": "canon", "label": "The category standard", "thesis": "The developer portfolio everyone ships: white page, name, one line, project cards, skills, executed impeccably.", "palette": ["#ffffff", "#111111", "#2563eb"], "materials": ["clean grid", "project cards"], "viewport": "Name and one sentence, a button, cards below.", "risk": "Indistinguishable from every other candidate's site."},
+  "steer": true
+}
